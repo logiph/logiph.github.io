@@ -1,21 +1,27 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>logiph</title>
+    <description>Code like an Artist</description>
+    <link>http://logiph.com/</link>
+    <atom:link href="http://logiph.com/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        <title>html javascript</title>
+        <description></description>
+        <pubDate>Sun, 08 Mar 2015 08:30:00 +0800</pubDate>
+        <link>http://logiph.com/org/2015/03/08/Html-Javascript-Test/</link>
+        <guid isPermaLink="true">http://logiph.com/org/2015/03/08/Html-Javascript-Test/</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Hello, World!</title>
+        <description>&lt;p&gt;bla bla bla bla !!!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Mar 2015 08:30:00 +0800</pubDate>
+        <link>http://logiph.com/org/2015/03/08/Hello_World/</link>
+        <guid isPermaLink="true">http://logiph.com/org/2015/03/08/Hello_World/</guid>
+      </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>html javascript &#8211; logiph</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is for test">
+    <meta name="author" content="logiph">
+    <meta name="keywords" content="Org">
+    <link rel="canonical" href="http://logiph.com/html/2015-03-08-wxjssdk/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="html javascript">
+    <meta property="og:description" content="Code like an Artist">
+    <meta property="og:url" content="http://logiph.com/html/2015-03-08-wxjssdk/">
+    <meta property="og:site_name" content="logiph">
+
+    <!-- Icons -->
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png"> -->
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <!-- <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"> -->
+</head>
+
+<body class="">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">logiph</a>
+      <nav class="site-nav right">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="h2">html javascript</h1>
+  </header>
+  <article class="post-content">
+  <p>&lt;!DOCTYPE html&gt;
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>微信JS-SDK Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body ontouchstart="">
+<div class="wxapi_container">
+    <div class="wxapi_index_container">
+      <ul class="label_box lbox_close wxapi_index_list">
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-basic">基础接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-share">分享接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-image">图像接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-voice">音频接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-smart">智能接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-device">设备信息接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-location">地理位置接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-webview">界面操作接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-scan">微信扫一扫接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-shopping">微信小店接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-card">微信卡券接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-pay">微信支付接口</a></li>
+      </ul>
+    </div>
+    <div class="lbox_close wxapi_form">
+      <h3 id="menu-basic">基础接口</h3>
+      <span class="desc">判断当前客户端是否支持指定JS接口</span>
+      <button class="btn btn_primary" id="checkJsApi">checkJsApi</button></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  &lt;h3 id=&quot;menu-share&quot;&gt;分享接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;获取“分享到朋友圈”按钮点击状态及自定义分享内容接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;onMenuShareTimeline&quot;&gt;onMenuShareTimeline&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;获取“分享给朋友”按钮点击状态及自定义分享内容接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;onMenuShareAppMessage&quot;&gt;onMenuShareAppMessage&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;获取“分享到QQ”按钮点击状态及自定义分享内容接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;onMenuShareQQ&quot;&gt;onMenuShareQQ&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;获取“分享到腾讯微博”按钮点击状态及自定义分享内容接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;onMenuShareWeibo&quot;&gt;onMenuShareWeibo&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-image&quot;&gt;图像接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;拍照或从手机相册中选图接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;chooseImage&quot;&gt;chooseImage&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;预览图片接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;previewImage&quot;&gt;previewImage&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;上传图片接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;uploadImage&quot;&gt;uploadImage&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;下载图片接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;downloadImage&quot;&gt;downloadImage&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-voice&quot;&gt;音频接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;开始录音接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;startRecord&quot;&gt;startRecord&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;停止录音接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;stopRecord&quot;&gt;stopRecord&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;播放语音接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;playVoice&quot;&gt;playVoice&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;暂停播放接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;pauseVoice&quot;&gt;pauseVoice&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;停止播放接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;stopVoice&quot;&gt;stopVoice&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;上传语音接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;uploadVoice&quot;&gt;uploadVoice&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;下载语音接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;downloadVoice&quot;&gt;downloadVoice&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-smart&quot;&gt;智能接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;识别音频并返回识别结果接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;translateVoice&quot;&gt;translateVoice&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-device&quot;&gt;设备信息接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;获取网络状态接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;getNetworkType&quot;&gt;getNetworkType&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-location&quot;&gt;地理位置接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;使用微信内置地图查看位置接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;openLocation&quot;&gt;openLocation&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;获取地理位置接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;getLocation&quot;&gt;getLocation&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-webview&quot;&gt;界面操作接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;隐藏右上角菜单接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;hideOptionMenu&quot;&gt;hideOptionMenu&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;显示右上角菜单接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;showOptionMenu&quot;&gt;showOptionMenu&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;关闭当前网页窗口接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;closeWindow&quot;&gt;closeWindow&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;批量隐藏功能按钮接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;hideMenuItems&quot;&gt;hideMenuItems&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;批量显示功能按钮接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;showMenuItems&quot;&gt;showMenuItems&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;隐藏所有非基础按钮接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;hideAllNonBaseMenuItem&quot;&gt;hideAllNonBaseMenuItem&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;显示所有功能按钮接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;showAllNonBaseMenuItem&quot;&gt;showAllNonBaseMenuItem&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-scan&quot;&gt;微信扫一扫&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;调起微信扫一扫接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;scanQRCode0&quot;&gt;scanQRCode(微信处理结果)&lt;/button&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;scanQRCode1&quot;&gt;scanQRCode(直接返回结果)&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-shopping&quot;&gt;微信小店接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;跳转微信商品页接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;openProductSpecificView&quot;&gt;openProductSpecificView&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-card&quot;&gt;微信卡券接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;批量添加卡券接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;addCard&quot;&gt;addCard&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;调起适用于门店的卡券列表并获取用户选择列表&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;chooseCard&quot;&gt;chooseCard&lt;/button&gt;
+  &lt;span class=&quot;desc&quot;&gt;查看微信卡包中的卡券接口&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;openCard&quot;&gt;openCard&lt;/button&gt;
+
+  &lt;h3 id=&quot;menu-pay&quot;&gt;微信支付接口&lt;/h3&gt;
+  &lt;span class=&quot;desc&quot;&gt;发起一个微信支付请求&lt;/span&gt;
+  &lt;button class=&quot;btn btn_primary&quot; id=&quot;chooseWXPay&quot;&gt;chooseWXPay&lt;/button&gt;
+&lt;/div&gt;
+</code></pre></div>
+<p></div>
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+  /*
+   * 注意：
+   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+   * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+   *
+   * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+   * 邮箱地址：weixin-open@qq.com
+   * 邮件主题：【微信JS-SDK反馈】具体问题
+   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+   */
+  wx.config({
+      debug: false,
+      appId: &#39;wxf8b4f85f3a794e77&#39;,
+      timestamp: 1424851145,
+      nonceStr: &#39;4gHUyjLbzbuKDb5p&#39;,
+      signature: &#39;a4def9314db41335090441007320f13dc68aa1fb&#39;,
+      jsApiList: [
+        &#39;checkJsApi&#39;,
+        &#39;onMenuShareTimeline&#39;,
+        &#39;onMenuShareAppMessage&#39;,
+        &#39;onMenuShareQQ&#39;,
+        &#39;onMenuShareWeibo&#39;,
+        &#39;hideMenuItems&#39;,
+        &#39;showMenuItems&#39;,
+        &#39;hideAllNonBaseMenuItem&#39;,
+        &#39;showAllNonBaseMenuItem&#39;,
+        &#39;translateVoice&#39;,
+        &#39;startRecord&#39;,
+        &#39;stopRecord&#39;,
+        &#39;onRecordEnd&#39;,
+        &#39;playVoice&#39;,
+        &#39;pauseVoice&#39;,
+        &#39;stopVoice&#39;,
+        &#39;uploadVoice&#39;,
+        &#39;downloadVoice&#39;,
+        &#39;chooseImage&#39;,
+        &#39;previewImage&#39;,
+        &#39;uploadImage&#39;,
+        &#39;downloadImage&#39;,
+        &#39;getNetworkType&#39;,
+        &#39;openLocation&#39;,
+        &#39;getLocation&#39;,
+        &#39;hideOptionMenu&#39;,
+        &#39;showOptionMenu&#39;,
+        &#39;closeWindow&#39;,
+        &#39;scanQRCode&#39;,
+        &#39;chooseWXPay&#39;,
+        &#39;openProductSpecificView&#39;,
+        &#39;addCard&#39;,
+        &#39;chooseCard&#39;,
+        &#39;openCard&#39;
+      ]
+  });
+</script>
+<script src="/js/demo.js"> </script>
+</html></p>
+
+  </article>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+         Available on <a href="https://github.com/logiph">Github</a>.
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
